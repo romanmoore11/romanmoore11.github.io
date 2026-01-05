@@ -1,0 +1,114 @@
+Here’s a new HTML page you can save as socials.html (or any name you like, e.g., links.html) in the same folder. This page lists the social media handles you requested in a clean, matching style — perfect as a central "Link in Bio" or "All My Links" page.
+HTML<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Links</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+    <style>
+        .socials-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .socials-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: rgb(84, 151, 106);
+            margin-bottom: 50px;
+        }
+        .social-card {
+            background-color: rgba(255, 255, 255, 0.95);
+            border: 3px solid #388e3c;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px auto;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .social-card:hover {
+            transform: scale(1.05);
+        }
+        .model-name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #388e3c;
+            margin-bottom: 20px;
+        }
+        .social-link {
+            display: block;
+            font-size: 24px;
+            margin: 15px 0;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .social-link:hover {
+            background-color: #388e3c;
+        }
+        .platform {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .back-link {
+            margin-top: 80px;
+            font-size: 18px;
+        }
+        .back-link a {
+            color: #388e3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="socials-container">
+        <h1 class="socials-title">Connect With Us</h1>
+
+        <!-- Ashley -->
+        <div class="social-card">
+            <div class="model-name">Ashley Sommers</div>
+            <div class="platform">Snapchat</div>
+            <a href="https://www.snapchat.com/add/dancr4life" class="social-link" target="_blank">
+                @dancr4life
+            </a>
+        </div>
+
+        <!-- Anna -->
+        <div class="social-card">
+            <div class="model-name">Anna de Ville</div>
+            <div class="platform">Snapchat</div>
+            <a href="https://www.snapchat.com/add/amytarango" class="social-link" target="_blank">
+                @amytarango
+            </a>
+        </div>
+
+        <!-- Celia -->
+        <div class="social-card">
+            <div class="model-name">Celia</div>
+            <div class="platform">Instagram</div>
+            <a href="https://www.instagram.com/celiasmith" class="social-link" target="_blank">
+                @celiasmith
+            </a>
+        </div>
+
+        <div class="back-link">
+            <a href="index.html">← Back to Gallery</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna de Ville Bio</title>
+    <link rel="stylesheet" href="styles.css">  <!-- Reuses your existing CSS -->
+    <script src="index.js"></script>           <!-- Optional: keeps random colors if you add boxes -->
+    <style>
+        /* Extra styles specific to the bio page */
+        .bio-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .bio-photo {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 4px solid #388e3c;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .bio-list {
+            text-align: left;
+            max-width: 500px;
+            margin: 30px auto;
+            font-size: 22px;
+            line-height: 2;
+            color: rgb(84, 151, 106);
+            background-color: rgba(255,255,255,0.9);
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid #388e3c;
+        }
+        .bio-list ol {
+            padding-left: 30px;
+        }
+        .back-link {
+            margin-top: 50px;
+            font-size: 18px;
+        }
+        .back-link a {
+            color: #388e3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bio-container">
+        <!-- Photo (reuses the same image from your main page) -->
+        <img src="anna.jpg" alt="Anna de Ville" class="bio-photo">
+
+        <h1>Anna Morrison</h1>
+
+        <!-- Ordered list with the details you requested for Ashley – adapted here -->
+        <div class="bio-list">
+            <ol>
+                <li>Role: Influencer at  <em>annamorissoninvestments.ig</em></li>
+                <li>Age: 37</li>
+                <li>Residence: Miami, FL</li>
+            </ol>
+        </div>
+
+        <!-- Optional back link -->
+        <div class="back-link">
+            <a href="index.html">← Back to Gallery</a>
+        </div>
+    </div>
+
+</body>
+</html>

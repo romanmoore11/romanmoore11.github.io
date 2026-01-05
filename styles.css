@@ -1,0 +1,100 @@
+.grid-image.video-link {
+    position: relative;                  /* Needed for positioning the link */
+    cursor: pointer;
+}
+
+.grid-image.video-link a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;                         /* Above the image */
+    display: block;
+}
+
+/* Play button overlay on hover */
+.grid-image.video-link::after {
+    content: "▶";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    text-shadow: 0 0 15px rgba(0,0,0,0.8);
+    z-index: 5;
+}
+
+.grid-image.video-link:hover::after {
+    opacity: 1;
+}
+
+.grid-image.video-link:hover img {
+    transform: scale(1.1);
+    transition: transform 0.4s ease;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+   
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust 250px to your preferred box size */
+    gap: 1px;
+    padding: 1px;
+    max-width: 1400px;
+    width: 100%;
+    
+}
+
+/* All grid items (boxes AND images) will behave the same */
+.grid-item,
+.grid-image {
+    width: 100%;
+    height: 400px;              /* Same height as the minmax above */
+   
+    border: 2px solid #388e3c;
+    border-radius: 8px;
+    overflow: hidden;           /* Important: crops overflowing image */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    color: rgb(84, 151, 106);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.4);
+    
+}
+
+.grid-item:hover,
+.grid-image:hover {
+    transform: scale(1.05);
+    background-color: #388e3c;
+}
+
+/* Style specifically for images */
+.grid-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          /* Fills the box perfectly, crops if needed */
+}
+
+/* Optional: text box at the bottom */
+.text-box {
+    grid-column: 1 / -1;        /* Makes it span the full row */
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
